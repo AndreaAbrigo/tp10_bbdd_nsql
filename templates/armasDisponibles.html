@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Compra de armas</title>
+    <style>
+        body{
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            background-color: rebeccapurple;
+            color: mintcream;
+        }
+        .tabla{
+            width: 550px;
+            margin: 0 auto;
+            font-size: 18px;
+            background-color: black;
+            border-radius: 10px;
+        }
+        .encabezado{
+            background-color: transparent;
+            text-align: center;
+        }
+        .cuerpo{
+            background-color:transparent;
+            color: rebeccapurple;
+        }
+        .inicio button {
+            background-color: transparent;
+            border: transparent;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            float:left;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            font-size: 16px;
+            padding: 20px;
+        }
+        .cont{
+            padding-top: 50px;
+            text-align: center;
+        }
+        .boton {
+            background-color: transparent;
+            border: black;
+            border-radius: 20px;
+            color: deeppink;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inicio">
+        <form action="login" method="POST">
+            <input value="{{usuario}}" type="hidden" class="form-control" name="nombre">
+            <button type="submit">Inicio</button>
+        </form>
+    </div>
+
+    <div class="cont">
+        <h1 style="color: black;">Armas disponibles para la compra</h1>
+        <table class="tabla">
+            <tr class="encabezado">
+            <th>Nombre</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+            </tr>  
+            {% for i in range(tamanio) %}
+                <tr class="cuerpo">
+                <td>{% print(nombres[i])%}</td>
+                <td>{% print(costos[i])%}</td>
+                <td>{% print(cantidades[i])%}</td>
+                <td style="width: 18%;">
+                    <form action="seleccionarCompra" method="POST">
+                        <input value="{{ides[i]}}" type="hidden" class="form-control" name="id">
+                        <input value="{{cantidades[i]}}" type="hidden" class="form-control" name="cantidad">
+                        <input value="{{nombres[i]}}" type="hidden" class="form-control" name="nombre">
+                        <input value="{{costos[i]}}" type="hidden" class="form-control" name="costo">
+                        <input value="{{usuario}}" type="hidden" class="form-control" name="usuario">
+                        <button class="boton" type="submit">COMPRAR</button>
+                    </form>
+                </td>
+                </tr>
+            {%endfor%}
+        </table> 
+    </div>
+
+  </body>

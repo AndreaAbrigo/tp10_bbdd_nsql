@@ -1,0 +1,24 @@
+{
+    "usuarios": [
+        {
+            "usuario": "dart_vader",
+            "privada": "6kkk5k37TFmgvzoJqHDTkAjxBPiSWcZQhwVyspQppKGn",
+            "publica": "GovWsQ4vAqffTfoJjwXM35NMhfcCHxKXTQdTx3FeMntS"
+        },
+        {
+            "usuario": "boba_fett",
+            "privada": "y6y1unyzfw9LdgPB5EidSBmTiHm4TkzMRD25G9ENg3m",
+            "publica": "4eBruZn1Ze8bquchn9EapbA9NPh5FUAP91a1xCFUv1aL"
+        },
+        {
+            "usuario": "greedo",
+            "privada": "BtHmU9E43FcFJ4tRVH4xVKqYG66kftsoLV919kBWyRU4",
+            "publica": "HU5eczMPfocSL4qt2DaKEpMHwm7saymjGYbW9SxrQmWS"
+        },
+        {
+            "usuario": "din_djarin",
+            "privada": "DyjJuZ1ZjgZ29WD7DV39RUKFTetyDdJGG8cYt2p2Rcv5",
+            "publica": "799xXpLNE3wRbVFUCPBAZknkC3so13BjqSE6haEG2GUM"
+        }
+    ]
+}

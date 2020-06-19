@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Error</title>
+    <style>
+        body{
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: mintcream;
+        }
+        .inicio button {
+            background-color: transparent;
+            border: transparent;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            float:left;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            font-size: 16px;
+            padding: 20px;
+            color: white;
+        }
+        .mensaje{
+            padding-top: 100px;
+            text-align: center;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inicio">
+        <form action="login" method="POST">
+            <input value="{{usuario}}" type="hidden" class="form-control" name="nombre">
+            <button type="submit">Inicio</button>
+        </form>
+    </div>
+
+    <div class="mensaje">
+        El comprador no tiene suficientes monedas
+    </div>
+  </body>

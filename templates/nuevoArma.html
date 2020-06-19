@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<title>Nuevo arma</title>
+<style>
+    h3{
+        text-align:center;
+        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .cuadro{
+        font-size: 14px;
+        display:block;
+        margin:auto;
+        border: black 2px solid;
+        width: 400px;
+        height: 150px;
+        padding: 10px;
+    }
+    .boton{
+        display:block;margin:auto;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    ul{
+        list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: transparent;border-radius: 20px 20px 20px 20px;
+    }
+    li{
+        float: left;font-size: 20px;text-decoration: none;padding: 20px; width:8%;
+    }
+    .botonVolver {
+            background-color: transparent;
+            border: transparent;
+            font-size:30px;
+            display:block;
+            color:black;
+            text-decoration:none;
+            font-weight:400;
+            font-size:15px;
+            padding:10px;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            width:200px;
+            text-align: left;
+        }
+</style>
+</head>
+
+<body style="background-color: white;">
+    <ul>
+        <li>
+            <form action="login" method="POST">
+                <input value="{{usuario}}" type="hidden" class="form-control" name="nombre">
+                <button class="botonVolver" type="submit">Volver</button>
+            </form>
+        </li>
+     </ul>
+
+    <h3>Cargar nuevo arma</h3>
+    <div class="cuadro">
+        <form action="altaArma" method="POST">
+            <input value="{{usuario}}" type="hidden" class="form-control" name="usuario">
+            <input value="{{privada}}" type="hidden" class="form-control" name="privada">
+            <input value="{{publica}}" type="hidden" class="form-control" name="publica">
+            <p style="height: 18px;"><input style="width: 98%;" type="text" name="nombre" placeholder="Nombre del arma: "></p>
+            <p style="height: 18px;"><input style="width: 98%;" type="text" name="cantidad" placeholder="Cantidad: "></p>
+            <p style="height: 18px;"><input style="width: 98%;" type="text" name="costo" placeholder="Costo:"></p>
+            <p style="margin-top: 30px;"><input class="boton" type="submit" value="Cargar"></p>
+            
+        </form>
+    </div>
+</body>
+</html>

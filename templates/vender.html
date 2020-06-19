@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<title>Nueva moneda</title>
+<style>
+    h3,h5{
+        text-align:center;
+        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .cuadro{
+        font-size: 14px;
+        display:block;
+        margin:auto;
+        border: black 2px solid;
+        width: 400px;
+        height: 150px;
+        padding: 10px;
+    }
+    .boton{
+        display:block;margin:auto;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    ul{
+        list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: transparent;border-radius: 20px 20px 20px 20px;
+    }
+    li{
+        float: left;font-size: 20px;text-decoration: none;padding: 20px; width:8%;
+    }
+    .botonVolver {
+            background-color: transparent;
+            border: transparent;
+            font-size:30px;
+            display:block;
+            color:black;
+            text-decoration:none;
+            font-weight:400;
+            font-size:15px;
+            padding:10px;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            width:200px;
+            text-align: left;
+        }
+</style>
+</head>
+
+<body style="background-color: white;">
+    <ul>
+        <li>
+            <form action="login" method="POST">
+                <input value="darth_vader" type="hidden" class="form-control" name="nombre">
+                <button class="botonVolver" type="submit">Volver</button>
+            </form>
+        </li>
+     </ul>
+
+    <h3>Vender {{nombre}}</h3>
+    <h5>Tienes {{cantidad}} disponibles</h5>
+    <div class="cuadro">
+        <form action="confirmarVenta" method="POST">
+            <input value="{{id}}" type="hidden" class="form-control" name="id">
+            <p style="height: 18px;"><input style="width: 98%;" type="text" name="cantidad" placeholder="Cantidad: "></p>
+            Comprador
+            <select style="width: 100%;" name="comprador">
+                <option value="Boba fett">Boba Fett</option>
+                <option value="Greedo">Greedo</option>
+                <option value="Din D jarin">Din Djarin</option>
+            </select>
+            <p style="margin-top: 30px;"><input class="boton" type="submit" value="Cargar"></p>
+            
+        </form>
+    </div>
+</body>
+</html>

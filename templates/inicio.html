@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <title>Bienvenido</title>
+    <style>
+        /* #p1 { background: darkslateblue; }
+            #p2 { background: tomato; }
+            #p3 { background: gold; }
+            #p4 { background: deeppink; }
+            #p5 { background: rebeccapurple; } */
+        
+        @import url('https://fonts.googleapis.com/css?family=Oswald:500');
+        body{
+        background-color: tomato;
+        }       
+        #salir a {
+            background-color: transparent;
+            border: transparent;
+            font-size:30px;
+            display:block;
+            color:#fff;
+            text-decoration:none;
+            font-weight:400;
+            font-size:15px;
+            padding:10px;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: right;
+        }
+        .menu{
+            background-color: transparent;
+            border: transparent;
+            font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin-top: 140px;
+            width: 25%; 
+            float:left;
+        }
+        li{
+            list-style: none;
+            margin-top: 40px;
+            text-align: right;
+        }
+        button{
+            background-color: transparent;
+            border: transparent;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            font-size: 14px;
+        }
+        .portada{
+            width: 60%; float:right;
+        }
+        .texto{
+            font-size: 40px;
+            padding-top: 60px;
+            padding-left: 60px;
+            font-family:"Brush Script MT";
+            font-style: italic;
+        }
+
+    </style>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+    <nav id="salir">
+        <a href="/" style="font-size:30px;padding-left: 450px;"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    </nav>  
+
+    <div class="menu">
+        <ul>
+            <li>
+             <form action="misArmas" method="POST">
+                 <input value="{{usuario}}" type="hidden" class="form-control" name="usuario">
+                 <button type="submit">Mis armas</button>
+             </form>
+           </li>
+           <li>
+             <form action="misMonedas" method="POST">
+                 <input value="{{usuario}}" type="hidden" class="form-control" name="usuario">
+                 <button type="submit">Mis monedas</button>
+             </form>
+           </li>
+           <li>
+                <form action="comprar" method="POST">
+                    <input value="{{usuario}}" type="hidden" class="form-control" name="usuario">
+                    <input value="{{privada}}" type="hidden" class="form-control" name="privada">
+                    <input value="{{publica}}" type="hidden" class="form-control" name="publica">
+                    <button type="submit">Comprar armas</button>
+                </form>
+            </li>
+        </ul> 
+    </div>
+    <div class="portada">
+        <div class="texto">
+            Bienvenido {{usuario}}
+        </div>
+    </div> 
+
+
+</body>
+</html>
+
+
